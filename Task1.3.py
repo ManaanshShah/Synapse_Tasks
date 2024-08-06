@@ -32,12 +32,8 @@ request_spending={
         ]
     }
 }
-def total_spending(request_spending,account_id,category):
-    if account_id in request_spending:
-        print(account_id)
-        if category in request_spending:
-            amount_spent=request_spending["transactions"]["amount"]
-            print(amount_spent)
-      
-total_spending(request_spending,"Mehak","Sponsers")
+def total_spending(request_spending,account_id:str,category:str):
+    Name=request_spending.get("account_id","Invalid Input")
+    Transaction=Name.get("transactions","Invalid Input")
+    Total=(Transaction["amount"] for Transactions in transactions if(Transaction["category"]==category))
     
